@@ -74,11 +74,6 @@ export default function DefaultNavbar() {
                                     }
                                     ripple="light"
                                 >
-                                    <Link to="/Category">
-                                        <DropdownItem color="lightBlue">
-                                            Category
-                                        </DropdownItem>
-                                    </Link>
                                     <Link to="/Product">
                                         <DropdownItem color="lightBlue">
                                             Product
@@ -93,9 +88,7 @@ export default function DefaultNavbar() {
                                 </Dropdown>
                             </div>
                             <Link  to="/Subscription">
-                            <NavLink
-                              
-                        
+                            <NavLink                     
                                 rel="noreferrer"
                                 ripple="light"
                             >

@@ -14,6 +14,12 @@ import Icon from '@material-tailwind/react/Icon';
 import Button from '@material-tailwind/react/Button';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
+import SearchIcon from '@mui/icons-material/Search';
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+
+
 
 
 export default function DefaultNavbar() {
@@ -38,23 +44,23 @@ export default function DefaultNavbar() {
 
                 <NavbarCollapse open={openNavbar}>
                     <Nav>
-                        <div className="flex flex-col z-50 lg:flex-row lg:items-center">
-                        <Link to="/">
-                            <NavLink
-                                ripple="light"
-                                className="my-link"
-                            >
-                                <Icon name="home" size="2xl" />
-                                &nbsp;Home Page
-                            </NavLink></Link>
+                        <div className="flex flex-col lg:flex-row lg:items-center">
+                            <Link to="/">
+                                <NavLink
+                                    ripple="light"
+                                    className="my-link"
+                                >
+                                    <Icon name="home" size="2xl" />
+                                    &nbsp;Home Page
+                                </NavLink></Link>
                             <Link to="/Aboutus">
-                            <NavLink
-                                ripple="light"
-                                className="my-link"
-                            >
-                                <Icon name="apps" size="2xl" />
-                                &nbsp;About Us
-                            </NavLink></Link>
+                                <NavLink
+                                    ripple="light"
+                                    className="my-link"
+                                >
+                                    <Icon name="apps" size="2xl" />
+                                    &nbsp;About Us
+                                </NavLink></Link>
                             <div className="text-white">
                                 <Dropdown
                                     color="transparent"
@@ -84,35 +90,62 @@ export default function DefaultNavbar() {
                                             Package
                                         </DropdownItem>
                                     </Link>
-                                    
+
                                 </Dropdown>
                             </div>
-                            <Link  to="/Subscription">
-                            <NavLink                     
-                                rel="noreferrer"
+                            <Link to="/Subscription">
+                                <NavLink
+                                    rel="noreferrer"
+                                    ripple="light"
+                                >
+                                    <SubscriptionsIcon
+
+                                        size="xl"
+                                    />
+                                    &nbsp;Subscription
+                                </NavLink>
+                            </Link>
+                            <Link to="/ServiceAreas">
+                                <NavLink
+
+
+                                    rel="noreferrer"
+                                    ripple="light"
+                                >
+                                    <LocationOnIcon />
+                                    <div className="mr-20">Areas</div>
+                                </NavLink>
+                            </Link>
+                            <Dropdown
+                                color="transparent"
+                                size="sm"
+                                buttonType="link"
+                                buttonText={
+                                    <div className="py-2.5 font-medium flex items-center">
+
+                                        <SearchIcon className='text-white cursor-pointer  mb-5 lg:mb-0 mb mx-5' />
+                                    </div>
+                                }
                                 ripple="light"
                             >
-                                <SubscriptionsIcon
-                               
-                                    size="xl"
-                                />
-                                &nbsp;Subscription
-                            </NavLink>
-                            </Link>
-                            <Link   to="/Areas">
-                            <NavLink
-                             
-                              
-                                rel="noreferrer"
-                                ripple="light"
-                            >
-                             <LocationOnIcon />
-                                Areas
-                            </NavLink>
-                            </Link>
+                                <Paper
+                                    component="form"
+                                    sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+                                >
+                                    <InputBase
+                                        sx={{ ml: 1, flex: 1 }}
+                                        placeholder="Search Google Maps"
+                                        inputProps={{ 'aria-label': 'Search Product' }}
+                                    />
+                                    <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+                                        <SearchIcon />
+                                    </IconButton>
+
+                                </Paper>
+                            </Dropdown>
                             <Link
                                 to="/login"
-                                
+
                                 rel="noreferrer"
                             >
                                 <Button
@@ -124,12 +157,12 @@ export default function DefaultNavbar() {
                                 </Button>
                             </Link>
                             <Link
-                               to="/register"
-                               rel="noreferrer"
+                                to="/register"
+                                rel="noreferrer"
                             >
                                 <Button
                                     color="lightBlue"
-                                    className="bg-white text-black ml-4"
+                                    className="bg-white mt-5 lg:mt-0 text-black ml-4"
                                     ripple="dark"
                                 >
                                     Sing Up

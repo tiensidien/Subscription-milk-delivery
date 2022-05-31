@@ -39,11 +39,19 @@ export default function Register() {
                                 iconName="email"
                             />
                         </div>
-                        <div className="mb-4 px-4">
+                        <div className="mb-10 px-4">
                             <InputIcon
                                 type="password"
                                 color="lightBlue"
                                 placeholder="Password"
+                                iconName="lock"
+                            />
+                        </div>
+                        <div className="mb-4 px-4">
+                            <InputIcon
+                                type="password"
+                                color="lightBlue"
+                                placeholder="Repeat Password"
                                 iconName="lock"
                             />
                         </div>

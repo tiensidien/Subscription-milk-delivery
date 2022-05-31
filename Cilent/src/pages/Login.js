@@ -10,6 +10,9 @@ import DefaultNavbar from 'components/DefaultNavbar';
 import SimpleFooter from 'components/SimpleFooter';
 import Page from 'components/login/Page';
 import Container from 'components/login/Container';
+import Stack from '@mui/material/Stack';
+import ButtonGoogle from '@mui/material/Button';
+import GoogleIcon from '@mui/icons-material/Google';
 
 export default function Login() {
     return (
@@ -48,8 +51,9 @@ export default function Login() {
                             />
                         </div>
                     </CardBody>
+
                     <CardFooter>
-                        <div className="flex justify-center bg-bb">
+                        <div className="flex -mt-7 justify-center bg-bb">
                             <Button
                                 color="lightBlue"
                                 buttonType="link"
@@ -60,6 +64,17 @@ export default function Login() {
                             </Button>
                         </div>
                     </CardFooter>
+                    <div className='flex font-light text-blue-600 justify-center -mt-5 mb-2 bg-bb '>     
+                    OR
+                    </div>
+                    <div className='flex  justify-center bg-bb '>     
+                    <Stack direction="row" spacing={2}>
+                        <ButtonGoogle variant="outlined" startIcon={<GoogleIcon />}>
+                            Login With Goole
+                        </ButtonGoogle>            
+                    </Stack>
+                    </div>
+                    
                 </Card>
             </Container>
             <SimpleFooter />

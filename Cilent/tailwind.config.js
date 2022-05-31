@@ -9,6 +9,9 @@ module.exports = {
             body: ['Roboto', 'sans-serif'],
         },
         extend: {
+            colors: {
+                'xanh': 'rgb(0,208,130) 100%)',
+              },
             backgroundImage: () => ({
                 'login-background':
                     "linear-gradient(rgba(0,0,0, 0.75), rgba(0,0,0, 0.75)), url('/src/assets/img/background-1920x1280.jpg')",
